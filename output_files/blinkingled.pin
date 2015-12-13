@@ -92,7 +92,7 @@ TDO                          : 20        : output :                   :         
 nCE                          : 21        :        :                   :         : 1         :                
 GND                          : 22        : gnd    :                   :         :           :                
 GND+                         : 23        :        :                   :         : 1         :                
-GND+                         : 24        :        :                   :         : 2         :                
+speedButton                  : 24        : input  : 3.3-V LVTTL       :         : 2         : Y              
 reset                        : 25        : input  : 3.3-V LVTTL       :         : 2         : Y              
 VCCIO2                       : 26        : power  :                   : 3.3V    : 2         :                
 GND                          : 27        : gnd    :                   :         :           :                

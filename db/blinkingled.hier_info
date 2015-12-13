@@ -2,6 +2,7 @@
 clk => blinkingled:E_blinkingled.clk
 reset => blinkingled:E_blinkingled.reset
 led <= blinkingled:E_blinkingled.led
+speedButton => blinkingled:E_blinkingled.speedButton
 
 
 |full_device|blinkingled:E_blinkingled
@@ -72,5 +73,7 @@ reset => \blink:counter[30].ACLR
 reset => \blink:counter[31].ACLR
 reset => \blink:ledstate.ACLR
 led <= \blink:ledstate.DB_MAX_OUTPUT_PORT_TYPE
+speedButton => blink.IN1
+speedButton => blink.IN1
 
 
