@@ -1,0 +1,57 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+
+ENTITY flashing_light IS
+  PORT (clk, reset : IN std_logic;
+        led : OUT std_logic);
+END ENTITY flashing_light;
+
+ARCHITECTURE bhv OF flashing_light IS
+BEGIN
+  blink : PROCESS(clk,reset)
+  VARIABLE ledstate: std_logic;
+  VARIABLE counter: integer := 0;
+  BEGIN
+    IF reset='0' THEN
+		  ledstate := '0';
+		  counter := 0;
+    ELSIF falling_edge(clk) THEN
+      counter := counter + 1;
+      if counter >= 50000000 THEN
+        ledstate := not ledstate;
+        counter := 0;
+      END IF;
+    END IF;
+      led <= ledstate;
+  END PROCESS;
+END;
+/*
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+ENTITY testcase_blink IS
+END testcase_blink;
+
+ARCHITECTURE testcase OF testcase_blink IS
+  SIGNAL reset : std_logic := '0';
+  SIGNAL clk : std_logic := '0'; 
+  SIGNAL led : std_logic;
+  SIGNAL finished : boolean := FALSE;
+BEGIN
+    clk <= NOT clk AFTER 10 ns WHEN not finished;
+    bl: ENTITY work.flashing_light PORT MAP (
+    clk         => clk,
+    reset       => reset,
+	  led         => led  
+   );  
+  PROCESS
+  BEGIN
+    reset <= '0';
+    WAIT FOR 40 ns;
+    reset <= '1';
+    WAIT FOR 2000 ms;
+    finished <= true;
+    WAIT;
+  END PROCESS;
+END; */

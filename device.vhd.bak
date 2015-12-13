@@ -1,0 +1,39 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+ENTITY full_device IS
+  PORT (clk  : IN std_logic;
+        reset  : IN std_logic;
+		  led : OUT std_logic;
+        /*kbdata   : IN STD_LOGIC;
+        kbclock  : IN STD_LOGIC;
+	audiol : OUT std_logic;
+	audior : OUT std_logic;		
+        dig0, dig1: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+        dig2, dig3: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	dig4, dig5: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	led : OUT std_logic_vector(7 downto 0);
+	switch : IN std_logic_vector (5 downto 0);
+        address1   : OUT std_logic_vector(17 DOWNTO 0);
+        OEn1       : OUT std_logic; 
+        CSn1       : OUT std_logic;
+        UBn1, LBn1 : OUT std_logic;
+        WEn1       : OUT std_logic;
+        data1      : INOUT std_logic_vector(15 DOWNTO 0);
+        address2   : OUT std_logic_vector(17 DOWNTO 0);
+        OEn2       : OUT std_logic; 
+        CSn2       : OUT std_logic;
+        UBn2, LBn2 : OUT std_logic;
+        WEn2       : OUT std_logic;
+        data2      : INOUT std_logic_vector(15 DOWNTO 0));	*/	
+END ENTITY full_device;
+
+ARCHITECTURE full_device_architecture OF full_device IS
+	SIGNAL keyA : std_logic_vector (7 downto 0);
+	SIGNAL keyB : std_logic_vector (7 downto 0);
+BEGIN
+	E_blinkingled:ENTITY work.blinkingled PORT MAP (
+		reset     => reset,
+		clk       => clk,
+		dig0      => dig0);
+  
+END full_device_architecture;

@@ -1,0 +1,76 @@
+|full_device
+clk => blinkingled:E_blinkingled.clk
+reset => blinkingled:E_blinkingled.reset
+led <= blinkingled:E_blinkingled.led
+
+
+|full_device|blinkingled:E_blinkingled
+clk => \blink:counter[0].CLK
+clk => \blink:counter[1].CLK
+clk => \blink:counter[2].CLK
+clk => \blink:counter[3].CLK
+clk => \blink:counter[4].CLK
+clk => \blink:counter[5].CLK
+clk => \blink:counter[6].CLK
+clk => \blink:counter[7].CLK
+clk => \blink:counter[8].CLK
+clk => \blink:counter[9].CLK
+clk => \blink:counter[10].CLK
+clk => \blink:counter[11].CLK
+clk => \blink:counter[12].CLK
+clk => \blink:counter[13].CLK
+clk => \blink:counter[14].CLK
+clk => \blink:counter[15].CLK
+clk => \blink:counter[16].CLK
+clk => \blink:counter[17].CLK
+clk => \blink:counter[18].CLK
+clk => \blink:counter[19].CLK
+clk => \blink:counter[20].CLK
+clk => \blink:counter[21].CLK
+clk => \blink:counter[22].CLK
+clk => \blink:counter[23].CLK
+clk => \blink:counter[24].CLK
+clk => \blink:counter[25].CLK
+clk => \blink:counter[26].CLK
+clk => \blink:counter[27].CLK
+clk => \blink:counter[28].CLK
+clk => \blink:counter[29].CLK
+clk => \blink:counter[30].CLK
+clk => \blink:counter[31].CLK
+clk => \blink:ledstate.CLK
+reset => \blink:counter[0].ACLR
+reset => \blink:counter[1].ACLR
+reset => \blink:counter[2].ACLR
+reset => \blink:counter[3].ACLR
+reset => \blink:counter[4].ACLR
+reset => \blink:counter[5].ACLR
+reset => \blink:counter[6].ACLR
+reset => \blink:counter[7].ACLR
+reset => \blink:counter[8].ACLR
+reset => \blink:counter[9].ACLR
+reset => \blink:counter[10].ACLR
+reset => \blink:counter[11].ACLR
+reset => \blink:counter[12].ACLR
+reset => \blink:counter[13].ACLR
+reset => \blink:counter[14].ACLR
+reset => \blink:counter[15].ACLR
+reset => \blink:counter[16].ACLR
+reset => \blink:counter[17].ACLR
+reset => \blink:counter[18].ACLR
+reset => \blink:counter[19].ACLR
+reset => \blink:counter[20].ACLR
+reset => \blink:counter[21].ACLR
+reset => \blink:counter[22].ACLR
+reset => \blink:counter[23].ACLR
+reset => \blink:counter[24].ACLR
+reset => \blink:counter[25].ACLR
+reset => \blink:counter[26].ACLR
+reset => \blink:counter[27].ACLR
+reset => \blink:counter[28].ACLR
+reset => \blink:counter[29].ACLR
+reset => \blink:counter[30].ACLR
+reset => \blink:counter[31].ACLR
+reset => \blink:ledstate.ACLR
+led <= \blink:ledstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
